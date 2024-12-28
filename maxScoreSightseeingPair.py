@@ -7,8 +7,7 @@ class Solution:
         sol = float('-inf')
         
         for j in range(1, len(values)):
-            c = best + (values[j] - j)
-            sol = max(sol, c)
+            sol = max(sol, best + (values[j] - j))
             best = max(best, values[j] + j)
         
         return sol
